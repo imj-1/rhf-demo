@@ -36,7 +36,7 @@ export const YoutubeForm = () => {
       dob: new Date(),
     },
   });
-  const { register, control, handleSubmit, formState, watch } = form;
+  const { register, control, handleSubmit, formState, watch, getValues } = form;
   const { errors } = formState;
 
   const { fields, append, remove } = useFieldArray({
@@ -48,12 +48,15 @@ export const YoutubeForm = () => {
     console.log("Form submitted", data);
   };
 
-  useEffect(() => {
-    const subscription = watch((value) => {
-      console.log(value);
-    });
-    return () => subscription.unsubscribe();
-  }, [watch]);
+  const handleGetValues = () => {
+    console.log("Get values", getValues());
+  };
+  // useEffect(() => {
+  //   const subscription = watch((value) => {
+  //     console.log(value);
+  //   });
+  //   return () => subscription.unsubscribe();
+  // }, [watch]);
 
   renderCount++;
 
@@ -232,6 +235,9 @@ export const YoutubeForm = () => {
         </div>
 
         <button>Submit</button>
+        <button type="button" onClick={handleGetValues}>
+          Get values
+        </button>
       </form>
       <DevTool control={control} />
     </div>

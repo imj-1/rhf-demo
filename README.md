@@ -98,4 +98,5 @@ Example:
 </div>
 ```
 
--
+- getValues method is a more performant way of watching form values. Unlike watch,
+  getValues will not trigger rerenders or subscribe to input changes making it a better option when a user clicks on a button or performs a specific action.
