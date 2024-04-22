@@ -100,3 +100,6 @@ Example:
 
 - getValues method is a more performant way of watching form values. Unlike watch,
   getValues will not trigger rerenders or subscribe to input changes making it a better option when a user clicks on a button or performs a specific action.
+- setValue fn allows you to dynamically set the value of a registered field and have the options to validate and update the form state. At the same time, it tries to avoid unnecessary rerender.
+
+-
