@@ -37,3 +37,7 @@ React Hook Form (RHF) is a performant, flexible, and extensible library for buil
 ### 6. Improved performance with controlled components
 
 - Components do not re-render when you type into form fields unlike traditional react forms where every keystroke would cause the component an dits children to re-render
+
+### Notes:
+
+- noValidate attribute prevents browser validation to allow rhf to handle validation of the fields
