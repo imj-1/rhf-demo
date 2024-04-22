@@ -67,4 +67,11 @@ React Hook Form (RHF) is a performant, flexible, and extensible library for buil
 })}
 ```
 
--
+- for object or array input data, it's recommended to use the validate function for validation as the other rules mostly apply to string, string[], number and boolean data types.
+- for register fn use dot notation syntax only for typescript usage consistency, so bracket [] will not work for array form value.
+
+```
+Example:
+    register('test.0.firstName'); // ✅
+    register('test[0]firstName'); // ❌
+```
