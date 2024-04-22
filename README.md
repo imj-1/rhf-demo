@@ -75,3 +75,25 @@ Example:
     register('test.0.firstName'); // ✅
     register('test[0]firstName'); // ❌
 ```
+
+- in order to render numbers as type number add the following to the options object in register function `valueAsNumber: true`
+
+```
+<div className="form-control">
+    <label htmlFor="age">Age</label>
+    <input
+        type="number"
+        id="age"
+        {...register("age", {
+        valueAsNumber: true,
+        required: {
+            value: true,
+            message: "Age is required",
+        },
+        })}
+    />
+    <p className="error">{errors.age?.message}</p>
+</div>
+```
+
+-
