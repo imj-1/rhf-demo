@@ -49,7 +49,7 @@ export const YoutubeForm = () => {
   };
 
   const handleGetValues = () => {
-    console.log("Get values", getValues());
+    console.log("Get values", getValues(["username", "channel"]));
   };
   // useEffect(() => {
   //   const subscription = watch((value) => {
