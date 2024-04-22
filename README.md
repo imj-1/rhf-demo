@@ -41,3 +41,30 @@ React Hook Form (RHF) is a performant, flexible, and extensible library for buil
 ### Notes:
 
 - noValidate attribute prevents browser validation to allow rhf to handle validation of the fields
+- to add custom validation we add a key value pair to the options object passed into the register function as shown below:
+
+```
+{...register("email", {
+        pattern: {
+            value:
+                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            message: "Invalid email format",
+        },
+        validate: {
+            notAdmin: (fieldValue) => {
+                return (
+                    fieldValue !== "admin@example.com" ||
+                    "Enter a different email address"
+                );
+            },
+            notBlackListed: (fieldValue) => {
+                return (
+                    !fieldValue.endsWith("addomain.com") ||
+                    "This domain is not supported"
+                );
+            },
+        },
+})}
+```
+
+-
