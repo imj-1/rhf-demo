@@ -110,3 +110,4 @@ Example:
 - isSubmitted: Set to true after the form is submitted. Will remain true until the reset method is invoked.
 - isSubmitSuccessful: Indicate the form was successfully submitted without any runtime error.
 - submitCount: Number of times the form was submitted.
+- reset: reverts form to initaial default values instead of clearing all form values. Do not call reset method in same onSubmit fn
