@@ -147,6 +147,7 @@ export const YoutubeForm = () => {
             type="text"
             id="twitter"
             {...register("social.twitter", {
+              disabled: watch("channel") === "",
               required: {
                 value: true,
                 message: "Twitter handle is required",
