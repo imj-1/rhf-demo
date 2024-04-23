@@ -111,3 +111,9 @@ Example:
 - isSubmitSuccessful: Indicate the form was successfully submitted without any runtime error.
 - submitCount: Number of times the form was submitted.
 - reset: reverts form to initaial default values instead of clearing all form values. Do not call reset method in same onSubmit fn
+- Validation mode is defaulted to "onSubmit" mode but can be changed to
+  - "onBlur" to allow validations to be triggered by blur events or
+  - "onTouched" where validation is initially triggered on the first blur event. After that, it is triggered on every change event.
+  - "onChange" Validation is triggered on the changeevent for each input, leading to multiple re-renders. WARNING: this often comes with a significant impact on performance!
+  - "all" Validation is triggered on both blur and change events.
+-
