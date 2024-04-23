@@ -106,3 +106,7 @@ Example:
 - Dirty state: a boolean value that indicates whtether user has modified the input or not.
   -isDirty and isTouched are derived form state that is easier to work with.
 - isDirty state comes in handy when disabling submit buttons until the user has filled in data
+- isSubmitting: true if the form is currently being submitted. false otherwise. Good for loading logic, preventing multiple submissions of same form, etc.
+- isSubmitted: Set to true after the form is submitted. Will remain true until the reset method is invoked.
+- isSubmitSuccessful: Indicate the form was successfully submitted without any runtime error.
+- submitCount: Number of times the form was submitted.
