@@ -102,4 +102,7 @@ Example:
   getValues will not trigger rerenders or subscribe to input changes making it a better option when a user clicks on a button or performs a specific action.
 - setValue fn allows you to dynamically set the value of a registered field and have the options to validate and update the form state. At the same time, it tries to avoid unnecessary rerender.
 
--
+- Touched state: a boolean value that indicates whether user has interacted with field or not
+- Dirty state: a boolean value that indicates whtether user has modified the input or not.
+  -isDirty and isTouched are derived form state that is easier to work with.
+- isDirty state comes in handy when disabling submit buttons until the user has filled in data
