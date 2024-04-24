@@ -35,7 +35,7 @@ export const YoutubeForm = () => {
       age: 0,
       dob: new Date(),
     },
-    mode: "all",
+    mode: "onSubmit",
   });
 
   const {
@@ -47,6 +47,7 @@ export const YoutubeForm = () => {
     getValues,
     setValue,
     reset,
+    trigger,
   } = form;
 
   const {
@@ -296,6 +297,9 @@ export const YoutubeForm = () => {
         </button>
         <button type="button" onClick={handleSetValue}>
           Set values
+        </button>
+        <button type="button" onClick={() => trigger("channel")}>
+          Validate
         </button>
       </form>
       <DevTool control={control} />
