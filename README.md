@@ -116,4 +116,4 @@ Example:
   - "onTouched" where validation is initially triggered on the first blur event. After that, it is triggered on every change event.
   - "onChange" Validation is triggered on the changeevent for each input, leading to multiple re-renders. WARNING: this often comes with a significant impact on performance!
   - "all" Validation is triggered on both blur and change events.
--
+- yupResolver with schema as an arg will validate the form values and populate the errors object
